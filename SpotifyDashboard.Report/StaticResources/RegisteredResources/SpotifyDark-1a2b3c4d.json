@@ -1,0 +1,171 @@
+{
+  "name": "SpotifyDark-1a2b3c4d.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/powerbi-desktop-samples/main/Report%20Theme%20JSON%20Schema/reportThemeSchema-2.143.json",
+  "dataColors": [
+    "#1DB954",
+    "#1ed760",
+    "#169C46",
+    "#2EBD59",
+    "#57D68D",
+    "#B3B3B3",
+    "#FF6B6B",
+    "#FFD93D",
+    "#6BCB77",
+    "#4CC9F0"
+  ],
+  "good": "#1DB954",
+  "neutral": "#FFD93D",
+  "bad": "#FF6B6B",
+  "maximum": "#1DB954",
+  "center": "#FFD93D",
+  "minimum": "#282828",
+  "null": "#535353",
+  "foreground": "#FFFFFF",
+  "background": "#121212",
+  "tableAccent": "#1DB954",
+  "firstLevelElements": "#FFFFFF",
+  "secondLevelElements": "#B3B3B3",
+  "thirdLevelElements": "#282828",
+  "fourthLevelElements": "#535353",
+  "secondaryBackground": "#282828",
+  "textClasses": {
+    "callout": {
+      "fontSize": 28,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#1DB954"
+    },
+    "title": {
+      "fontSize": 12,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#FFFFFF"
+    },
+    "header": {
+      "fontSize": 11,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#FFFFFF"
+    },
+    "label": {
+      "fontSize": 10,
+      "fontFace": "Segoe UI",
+      "color": "#B3B3B3"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [
+          {
+            "show": false
+          }
+        ],
+        "background": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#181818"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#282828"
+              }
+            },
+            "radius": 8
+          }
+        ]
+      }
+    },
+    "cardVisual": {
+      "*": {
+        "title": [
+          {
+            "show": false
+          }
+        ],
+        "cardCalloutArea": [
+          {
+            "paddingUniform": 8
+          }
+        ]
+      }
+    },
+    "tableEx": {
+      "*": {
+        "stylePreset": [
+          {
+            "name": "None"
+          }
+        ],
+        "columnHeaders": [
+          {
+            "columnAdjustment": "growToFit",
+            "autoSizeColumnWidth": true,
+            "fontColor": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": "#282828"
+              }
+            }
+          }
+        ],
+        "values": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "backColorPrimary": {
+              "solid": {
+                "color": "#181818"
+              }
+            },
+            "backColorSecondary": {
+              "solid": {
+                "color": "#1e1e1e"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "slicer": {
+      "*": {
+        "header": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "background": {
+              "solid": {
+                "color": "#181818"
+              }
+            }
+          }
+        ],
+        "items": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
