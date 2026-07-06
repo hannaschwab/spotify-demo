@@ -2,8 +2,8 @@
   "version": "4.0",
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definitionProperties/2.0.0/schema.json",
   "datasetReference": {
-    "byConnection": {
-      "connectionString": "semanticmodelid=ff7bf703-9893-421a-8186-bb55edf07a3d"
+    "byPath": {
+      "path": "../spotify_sm.SemanticModel"
     }
   }
 }
