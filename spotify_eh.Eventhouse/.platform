@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Eventhouse",
+    "displayName": "spotify_eh",
+    "description": "spotify_eh"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c4fce165-f3e1-8f1c-41bc-5ab7c0c4abb0"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "115441811548324",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "gold_artist_performance",
+  "entityIdParts": [
+    "2766744552727554947"
+  ],
+  "displayNamePropertyId": null,
+  "namespaceType": "Custom",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "2766744552727554947",
+      "name": "artist_id",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2766744556847422670",
+      "name": "artist_name",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2766744555692458122",
+      "name": "avg_chart_rank",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "2766744552971855653",
+      "name": "chart_appearances",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "2766744553669350327",
+      "name": "listener_tier",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2766744556155447702",
+      "name": "momentum_score",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "2766744555240473088",
+      "name": "months_since_release",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "2766744556037696490",
+      "name": "primary_genre",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2766744554865144913",
+      "name": "total_streams",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "2766744553418592622",
+      "name": "weeks_rising",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "2766744553051876113",
+      "name": "weeks_top10",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    }
+  ],
+  "timeseriesProperties": [],
+  "semanticEnrichment": {
+    "synonyms": [
+      "artist stats",
+      "artist metrics",
+      "artist performance",
+      "popular artists",
+      "trending artists"
+    ],
+    "description": "Aggregated performance metrics per artist. Contains total streams, average chart rank, momentum score (% of weeks trending up), weeks in top 10, and months since last release. Use this to answer questions about artist popularity, momentum, and activity levels.",
+    "customAttributes": {}
+  },
+  "untypedProperties": []
+}

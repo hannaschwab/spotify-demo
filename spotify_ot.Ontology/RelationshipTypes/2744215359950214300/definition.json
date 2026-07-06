@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "2744215359950214300",
+  "name": "gold_weekly_rankings_has_gold_rising_tracks",
+  "namespaceType": "Imported",
+  "source": {
+    "entityTypeId": "93688790669080"
+  },
+  "target": {
+    "entityTypeId": "62971269571336"
+  }
+}

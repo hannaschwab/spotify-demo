@@ -1,0 +1,80 @@
+table gold_genre_trends
+	lineageTag: a408b697-c59c-42ec-b693-6bce7eda8dfa
+	sourceLineageTag: [dbo].[gold_genre_trends]
+
+	column track_genre
+		dataType: string
+		lineageTag: 5558376a-3e91-4694-b647-50c8aaa94232
+		sourceLineageTag: track_genre
+		summarizeBy: none
+		sourceColumn: track_genre
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		lineageTag: e21756c5-58d3-4a4c-a58c-e17cbdbcfb81
+		sourceLineageTag: region
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column week_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: defeb508-8212-4bc8-b126-35d470cd708c
+		sourceLineageTag: week_date
+		summarizeBy: none
+		sourceColumn: week_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_rank
+		dataType: double
+		lineageTag: 97887fba-3313-43dc-982f-6421b192640d
+		sourceLineageTag: avg_rank
+		summarizeBy: sum
+		sourceColumn: avg_rank
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_streams
+		dataType: int64
+		formatString: 0
+		lineageTag: 2053f274-ff70-493d-87d7-9103506dbc73
+		sourceLineageTag: total_streams
+		summarizeBy: sum
+		sourceColumn: total_streams
+
+		annotation SummarizationSetBy = Automatic
+
+	column charting_tracks
+		dataType: int64
+		formatString: 0
+		lineageTag: 23b8b5ae-9665-4305-914d-ab88e483f1e4
+		sourceLineageTag: charting_tracks
+		summarizeBy: sum
+		sourceColumn: charting_tracks
+
+		annotation SummarizationSetBy = Automatic
+
+	column rising_tracks
+		dataType: int64
+		formatString: 0
+		lineageTag: 5372f272-4e82-49eb-ace1-04c735a0d59a
+		sourceLineageTag: rising_tracks
+		summarizeBy: sum
+		sourceColumn: rising_tracks
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_genre_trends = entity
+		mode: directLake
+		source
+			entityName: gold_genre_trends
+			schemaName: dbo
+			expressionSource: 'DirectLake - spotify_lh'
+

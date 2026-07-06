@@ -1,0 +1,76 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "7a9661ac-ad9f-4b0d-abe4-2214b0b3b8f5",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "region",
+        "targetPropertyId": "2744114450918815298"
+      },
+      {
+        "sourceColumnName": "rank",
+        "targetPropertyId": "2744114475153718626"
+      },
+      {
+        "sourceColumnName": "track_id",
+        "targetPropertyId": "2744114498559467345"
+      },
+      {
+        "sourceColumnName": "track_name",
+        "targetPropertyId": "2744114516455956629"
+      },
+      {
+        "sourceColumnName": "primary_artist",
+        "targetPropertyId": "2744114542620052081"
+      },
+      {
+        "sourceColumnName": "track_genre",
+        "targetPropertyId": "2744114567397534971"
+      },
+      {
+        "sourceColumnName": "streams",
+        "targetPropertyId": "2744114586667613226"
+      },
+      {
+        "sourceColumnName": "trend",
+        "targetPropertyId": "2744114609554399857"
+      },
+      {
+        "sourceColumnName": "is_top10",
+        "targetPropertyId": "2744114629821233320"
+      },
+      {
+        "sourceColumnName": "is_rising",
+        "targetPropertyId": "2744114656759683081"
+      },
+      {
+        "sourceColumnName": "danceability",
+        "targetPropertyId": "2744114678677707002"
+      },
+      {
+        "sourceColumnName": "energy",
+        "targetPropertyId": "2744114700487118898"
+      },
+      {
+        "sourceColumnName": "valence",
+        "targetPropertyId": "2744114722124037371"
+      },
+      {
+        "sourceColumnName": "mood",
+        "targetPropertyId": "2744114744247318546"
+      },
+      {
+        "sourceColumnName": "energy_level",
+        "targetPropertyId": "2744114768452581676"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "itemId": "cf610899-a0e3-8797-45c2-2b4c219acfff",
+      "sourceTableName": "gold_weekly_rankings",
+      "sourceSchema": "dbo"
+    }
+  }
+}

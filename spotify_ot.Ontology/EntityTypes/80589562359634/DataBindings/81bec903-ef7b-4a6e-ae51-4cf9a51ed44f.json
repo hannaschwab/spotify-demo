@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "81bec903-ef7b-4a6e-ae51-4cf9a51ed44f",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "track_genre",
+        "targetPropertyId": "2744114239475402266"
+      },
+      {
+        "sourceColumnName": "region",
+        "targetPropertyId": "2744114262339308289"
+      },
+      {
+        "sourceColumnName": "week_date",
+        "targetPropertyId": "2744114281124060584"
+      },
+      {
+        "sourceColumnName": "avg_rank",
+        "targetPropertyId": "2744114307363063250"
+      },
+      {
+        "sourceColumnName": "total_streams",
+        "targetPropertyId": "2744114327080136996"
+      },
+      {
+        "sourceColumnName": "charting_tracks",
+        "targetPropertyId": "2744114348443150004"
+      },
+      {
+        "sourceColumnName": "rising_tracks",
+        "targetPropertyId": "2744114372415504291"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "itemId": "cf610899-a0e3-8797-45c2-2b4c219acfff",
+      "sourceTableName": "gold_genre_trends",
+      "sourceSchema": "dbo"
+    }
+  }
+}

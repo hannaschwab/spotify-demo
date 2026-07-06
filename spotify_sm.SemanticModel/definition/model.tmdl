@@ -1,0 +1,22 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["DirectLake - spotify_lh","Query"]
+
+annotation PBI_ProTooling = ["DirectLakeOnOneLakeInWeb","WebModelingEdit"]
+
+ref table gold_rising_tracks
+ref table gold_artist_performance
+ref table gold_genre_trends
+ref table gold_weekly_rankings
+ref table Query
+ref table DateTableTemplate_8ce258ee-e874-452e-8a57-6ef938543293
+ref table LocalDateTable_f134943c-e73e-4994-8182-cd106c27d205
+

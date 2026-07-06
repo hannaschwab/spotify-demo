@@ -1,0 +1,76 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "d03b0e39-5cfe-4a54-88e5-e8e6b4cfda44",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "track_id",
+        "targetPropertyId": "2744113083191328811"
+      },
+      {
+        "sourceColumnName": "track_name",
+        "targetPropertyId": "2744113139069641858"
+      },
+      {
+        "sourceColumnName": "primary_artist",
+        "targetPropertyId": "2744113169837944990"
+      },
+      {
+        "sourceColumnName": "artist_name",
+        "targetPropertyId": "2744113191017250143"
+      },
+      {
+        "sourceColumnName": "track_genre",
+        "targetPropertyId": "2744113218559310011"
+      },
+      {
+        "sourceColumnName": "danceability",
+        "targetPropertyId": "2744113241020262567"
+      },
+      {
+        "sourceColumnName": "energy",
+        "targetPropertyId": "2744113267753216713"
+      },
+      {
+        "sourceColumnName": "valence",
+        "targetPropertyId": "2744113291786554989"
+      },
+      {
+        "sourceColumnName": "mood",
+        "targetPropertyId": "2744113317295315978"
+      },
+      {
+        "sourceColumnName": "listener_tier",
+        "targetPropertyId": "2744113339291232133"
+      },
+      {
+        "sourceColumnName": "months_since_release",
+        "targetPropertyId": "2744113364896563365"
+      },
+      {
+        "sourceColumnName": "regions_charting",
+        "targetPropertyId": "2744113388625164351"
+      },
+      {
+        "sourceColumnName": "avg_rank",
+        "targetPropertyId": "2744113413621489531"
+      },
+      {
+        "sourceColumnName": "total_streams",
+        "targetPropertyId": "2744113436714060983"
+      },
+      {
+        "sourceColumnName": "top10_regions",
+        "targetPropertyId": "2744113461609044319"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "itemId": "cf610899-a0e3-8797-45c2-2b4c219acfff",
+      "sourceTableName": "gold_rising_tracks",
+      "sourceSchema": "dbo"
+    }
+  }
+}

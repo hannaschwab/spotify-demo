@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "2830190746499518087",
+  "name": "gold_artist_performance_has_gold_rising_tracks",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "115441811548324"
+  },
+  "target": {
+    "entityTypeId": "62971269571336"
+  }
+}

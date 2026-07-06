@@ -1,0 +1,226 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "1a4a829b-a601-929c-431f-00cd7850a768",
+  "workspaceId": "00000000-0000-0000-0000-000000000000",
+  "dataSourceInstructions": null,
+  "displayName": "spotify_eh",
+  "type": "kusto",
+  "userDescription": "Key business definitions:\n- \"Trending\" or \"rising\" = is_rising is true OR momentum_score > 50\n- \"Inactive artist\" = months_since_release >= 12\n- \"Danceable\" = danceability >= 0.7\n- \"Popular\" = total_streams in the top 25% of artists\n- \"Dominant genre\" = highest stream_count or lowest avg_rank in a region\n- EU regions covered: Germany, United Kingdom, France, Netherlands, \n  Sweden, Norway, Denmark, Austria, Switzerland, Spain",
+  "metadata": {},
+  "elements": [
+    {
+      "id": "6580b3d8-882b-49c5-9d3b-e6821f906792",
+      "is_selected": false,
+      "display_name": "Tables",
+      "type": "table_grouping",
+      "description": null,
+      "children": [
+        {
+          "id": "4a01a212-a922-4fd8-bf42-edfa90646b14",
+          "is_selected": true,
+          "display_name": "streaming_events",
+          "type": "kusto.table",
+          "description": null,
+          "children": [
+            {
+              "id": "event_id",
+              "is_selected": true,
+              "display_name": "event_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "track_id",
+              "is_selected": true,
+              "display_name": "track_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "track_name",
+              "is_selected": true,
+              "display_name": "track_name",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "artist_name",
+              "is_selected": true,
+              "display_name": "artist_name",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "region",
+              "is_selected": true,
+              "display_name": "region",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "event_type",
+              "is_selected": true,
+              "display_name": "event_type",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "platform",
+              "is_selected": true,
+              "display_name": "platform",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "event_timestamp",
+              "is_selected": true,
+              "display_name": "event_timestamp",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "stream_duration_sec",
+              "is_selected": true,
+              "display_name": "stream_duration_sec",
+              "type": "kusto.column",
+              "data_type": "System.Int32",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "completed",
+              "is_selected": true,
+              "display_name": "completed",
+              "type": "kusto.column",
+              "data_type": "System.SByte",
+              "description": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "702503c3-2155-4f16-a915-0a865152fa0c",
+      "is_selected": false,
+      "display_name": "Functions",
+      "type": "function_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "d857613e-7bca-4aaa-b628-76c14d4729a6",
+      "is_selected": false,
+      "display_name": "Shortcuts",
+      "type": "shortcut_grouping",
+      "description": null,
+      "children": []
+    },
+    {
+      "id": "413150bf-d428-4da6-bc6a-52280eb4f232",
+      "is_selected": false,
+      "display_name": "Materialized Views",
+      "type": "materialized_view_grouping",
+      "description": null,
+      "children": [
+        {
+          "id": "b8c34f5b-8e63-4f87-b807-72990b34e1a1",
+          "is_selected": true,
+          "display_name": "streaming_summary",
+          "type": "kusto.materialized_view",
+          "description": null,
+          "children": [
+            {
+              "id": "track_id",
+              "is_selected": true,
+              "display_name": "track_id",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "track_name",
+              "is_selected": true,
+              "display_name": "track_name",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "artist_name",
+              "is_selected": true,
+              "display_name": "artist_name",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "region",
+              "is_selected": true,
+              "display_name": "region",
+              "type": "kusto.column",
+              "data_type": "System.String",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "stream_count",
+              "is_selected": true,
+              "display_name": "stream_count",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "total_events",
+              "is_selected": true,
+              "display_name": "total_events",
+              "type": "kusto.column",
+              "data_type": "System.Int64",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "avg_duration_sec",
+              "is_selected": true,
+              "display_name": "avg_duration_sec",
+              "type": "kusto.column",
+              "data_type": "System.Double",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "last_event",
+              "is_selected": true,
+              "display_name": "last_event",
+              "type": "kusto.column",
+              "data_type": "System.DateTime",
+              "description": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

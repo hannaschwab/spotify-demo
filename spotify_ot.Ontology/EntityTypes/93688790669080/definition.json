@@ -1,0 +1,139 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "93688790669080",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "gold_weekly_rankings",
+  "entityIdParts": [],
+  "displayNamePropertyId": null,
+  "namespaceType": "Imported",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "2744114450918815298",
+      "name": "region",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2744114475153718626",
+      "name": "rank",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "2744114498559467345",
+      "name": "track_id",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2744114516455956629",
+      "name": "track_name",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2744114542620052081",
+      "name": "primary_artist",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2744114567397534971",
+      "name": "track_genre",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2744114586667613226",
+      "name": "streams",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "2744114609554399857",
+      "name": "trend",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2744114629821233320",
+      "name": "is_top10",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Boolean"
+    },
+    {
+      "id": "2744114656759683081",
+      "name": "is_rising",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Boolean"
+    },
+    {
+      "id": "2744114678677707002",
+      "name": "danceability",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "2744114700487118898",
+      "name": "energy",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "2744114722124037371",
+      "name": "valence",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "2744114744247318546",
+      "name": "mood",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2744114768452581676",
+      "name": "energy_level",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2744114794613154792",
+      "name": "Top_10_Tracks",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    }
+  ],
+  "timeseriesProperties": [],
+  "semanticEnrichment": {
+    "synonyms": [
+      "chart rankings",
+      "weekly charts",
+      "current charts",
+      "top tracks",
+      "charts by region",
+      "European charts"
+    ],
+    "description": "Current week chart rankings across 10 European regions. One row per track per region. Contains rank, streams, trend direction, audio features (danceability, energy, mood), and whether the track is top 10 or rising. Use this for regional chart performance, current rankings, and week-by-week comparisons.",
+    "customAttributes": {}
+  },
+  "untypedProperties": []
+}

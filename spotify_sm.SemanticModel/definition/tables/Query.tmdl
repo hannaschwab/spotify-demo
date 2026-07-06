@@ -1,0 +1,115 @@
+table Query
+	lineageTag: 24c39ea2-b3dd-4ed6-bfc7-af034e9a07b5
+
+	measure 'Live Streams Today' = COUNTROWS(FILTER('Query', 'Query'[event_type] = "stream"))
+		formatString: 0
+		lineageTag: f3ea4fcc-a9a4-4e65-9670-641c5d7aa836
+
+	measure 'Live Stream Spike' =
+			
+			CALCULATE(
+			    COUNTROWS('Query'),
+			    'Query'[event_type] = "stream",
+			    'Query'[completed] = TRUE()
+			)
+		formatString: 0
+		lineageTag: 76d782d9-247e-469d-b567-653511d90199
+
+	column event_id
+		dataType: string
+		lineageTag: 3cc628c1-6af4-42d6-934e-6792cc6bfac1
+		summarizeBy: none
+		sourceColumn: event_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column track_id
+		dataType: string
+		lineageTag: d8c1edbf-1a4f-4539-9244-d7be3dc87460
+		summarizeBy: none
+		sourceColumn: track_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column track_name
+		dataType: string
+		lineageTag: f0f87c8f-fc2b-4a4e-9eb3-6f5acb0b6332
+		summarizeBy: none
+		sourceColumn: track_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column artist_name
+		dataType: string
+		lineageTag: f0e46656-fe24-467d-a19f-cd4500c108fd
+		summarizeBy: none
+		sourceColumn: artist_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		lineageTag: d885f443-8145-4048-a829-2dd536ec5f32
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_type
+		dataType: string
+		lineageTag: 1171e5c9-bbe9-4683-b4bd-bb5048d9f20e
+		summarizeBy: none
+		sourceColumn: event_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column platform
+		dataType: string
+		lineageTag: a2f86570-ccf0-43d4-8b30-2ad8e4b4ea16
+		summarizeBy: none
+		sourceColumn: platform
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c8977deb-d87f-4005-9dc1-612627876141
+		summarizeBy: none
+		sourceColumn: event_timestamp
+
+		variation Variation
+			isDefault
+			relationship: 9e814ab4-5fbf-4aa4-8c5c-fa526c04cf24
+			defaultHierarchy: LocalDateTable_f134943c-e73e-4994-8182-cd106c27d205.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column stream_duration_sec
+		dataType: int64
+		formatString: 0
+		lineageTag: e21049ac-61e7-4a4a-aa35-e6e20102b579
+		summarizeBy: sum
+		sourceColumn: stream_duration_sec
+
+		annotation SummarizationSetBy = Automatic
+
+	column completed
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b5bc477c-99b3-40ec-9406-793bc5921806
+		summarizeBy: none
+		sourceColumn: completed
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Query = m
+		mode: import
+		source =
+				let
+				  Source = AzureDataExplorer.KqlDatabase("https://trd-b7df3megvv793a2c6s.z6.kusto.fabric.microsoft.com", "spotify_eh", "streaming_events", [MaxRows = null, MaxSize = null, NoTruncate = null, AdditionalSetStatements = null])
+				in
+				  Source
+
+	annotation PBI_ResultType = Table
+

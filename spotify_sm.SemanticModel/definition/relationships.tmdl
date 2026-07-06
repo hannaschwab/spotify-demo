@@ -1,0 +1,23 @@
+relationship 737692dc-090a-8cb4-beb4-7c1580b8cecd
+	fromColumn: gold_weekly_rankings.track_id
+	toColumn: gold_rising_tracks.track_id
+
+relationship 50d774ec-d971-51ec-79ac-ced59cebc264
+	fromColumn: gold_rising_tracks.artist_name
+	toColumn: gold_artist_performance.artist_name
+
+relationship c61fffa7-806e-9644-aa2c-b6d1f65b7adc
+	toCardinality: many
+	fromColumn: gold_weekly_rankings.track_genre
+	toColumn: gold_genre_trends.track_genre
+
+relationship 9e814ab4-5fbf-4aa4-8c5c-fa526c04cf24
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Query.event_timestamp
+	toColumn: LocalDateTable_f134943c-e73e-4994-8182-cd106c27d205.Date
+
+relationship b10fe945-bd3f-ee6e-653d-128e50764ca5
+	toCardinality: many
+	fromColumn: Query.track_id
+	toColumn: gold_weekly_rankings.track_id
+

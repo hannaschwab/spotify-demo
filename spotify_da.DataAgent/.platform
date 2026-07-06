@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataAgent",
+    "displayName": "spotify_da"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "272513b6-98cd-ab8b-4a1f-12db1a55d084"
+  }
+}

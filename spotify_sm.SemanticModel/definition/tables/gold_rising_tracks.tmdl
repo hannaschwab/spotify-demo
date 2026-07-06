@@ -1,0 +1,171 @@
+table gold_rising_tracks
+	lineageTag: 9f7a4e71-d2ae-4433-a244-447b366609ad
+	sourceLineageTag: [dbo].[gold_rising_tracks]
+
+	measure 'Rising Tracks Count' = COUNTROWS(gold_rising_tracks)
+		formatString: 0
+		lineageTag: 5e3a8b46-2fd1-4920-8b24-e7e62ae42ff5
+
+		changedProperty = Name
+
+	measure 'High Danceability Rising' = COUNTROWS(FILTER(gold_rising_tracks, gold_rising_tracks[danceability] >= 0.7))
+		formatString: 0
+		lineageTag: 442e84f6-f3ad-4b40-878f-221e4092eddd
+
+		changedProperty = Name
+
+	column track_id
+		dataType: string
+		lineageTag: b863a5e5-a7ef-451c-9005-925173c762d5
+		sourceLineageTag: track_id
+		summarizeBy: none
+		sourceColumn: track_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column track_name
+		dataType: string
+		lineageTag: a646fb37-83ad-4240-ab01-aaf753a19526
+		sourceLineageTag: track_name
+		summarizeBy: none
+		sourceColumn: track_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column primary_artist
+		dataType: string
+		lineageTag: 2f589d45-eba1-4d61-a547-77c23a9d4e2d
+		sourceLineageTag: primary_artist
+		summarizeBy: none
+		sourceColumn: primary_artist
+
+		annotation SummarizationSetBy = Automatic
+
+	column artist_name
+		dataType: string
+		lineageTag: 5d03ea9a-83d5-4a94-b11c-12e0438af33a
+		sourceLineageTag: artist_name
+		summarizeBy: none
+		sourceColumn: artist_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column track_genre
+		dataType: string
+		lineageTag: f1acc14a-dfff-4e21-b2b8-8cf043ce6557
+		sourceLineageTag: track_genre
+		summarizeBy: none
+		sourceColumn: track_genre
+
+		annotation SummarizationSetBy = Automatic
+
+	column danceability
+		dataType: double
+		lineageTag: eb558982-5c8d-4260-adee-2b73167d7cb4
+		sourceLineageTag: danceability
+		summarizeBy: sum
+		sourceColumn: danceability
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column energy
+		dataType: double
+		lineageTag: aad7d2f4-81d9-4752-bbf9-2e2ff30aed71
+		sourceLineageTag: energy
+		summarizeBy: sum
+		sourceColumn: energy
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column valence
+		dataType: double
+		lineageTag: 5e6079ac-1e2f-4799-95a7-0d1672012f11
+		sourceLineageTag: valence
+		summarizeBy: sum
+		sourceColumn: valence
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column mood
+		dataType: string
+		lineageTag: 6251714e-6cc9-4dc2-bdfd-771d715c9c5b
+		sourceLineageTag: mood
+		summarizeBy: none
+		sourceColumn: mood
+
+		annotation SummarizationSetBy = Automatic
+
+	column listener_tier
+		dataType: string
+		lineageTag: 4ba81796-c5c6-4138-a931-285a2f9a0db3
+		sourceLineageTag: listener_tier
+		summarizeBy: none
+		sourceColumn: listener_tier
+
+		annotation SummarizationSetBy = Automatic
+
+	column months_since_release
+		dataType: double
+		lineageTag: b5387488-e64a-4ce2-bb1b-1922e44d8060
+		sourceLineageTag: months_since_release
+		summarizeBy: sum
+		sourceColumn: months_since_release
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column regions_charting
+		dataType: int64
+		formatString: 0
+		lineageTag: 09113e25-0c74-4c29-a164-c82c289ff668
+		sourceLineageTag: regions_charting
+		summarizeBy: sum
+		sourceColumn: regions_charting
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_rank
+		dataType: double
+		lineageTag: 916fe222-2231-4b18-94d1-c645dd20858a
+		sourceLineageTag: avg_rank
+		summarizeBy: sum
+		sourceColumn: avg_rank
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_streams
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b1360ea-1f9d-46a7-9494-2ba09ec4310f
+		sourceLineageTag: total_streams
+		summarizeBy: sum
+		sourceColumn: total_streams
+
+		annotation SummarizationSetBy = Automatic
+
+	column top10_regions
+		dataType: int64
+		formatString: 0
+		lineageTag: 06d7de6e-76c9-4957-bcd9-02398b89180c
+		sourceLineageTag: top10_regions
+		summarizeBy: sum
+		sourceColumn: top10_regions
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_rising_tracks = entity
+		mode: directLake
+		source
+			entityName: gold_rising_tracks
+			schemaName: dbo
+			expressionSource: 'DirectLake - spotify_lh'
+

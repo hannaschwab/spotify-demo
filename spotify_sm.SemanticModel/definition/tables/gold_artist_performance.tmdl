@@ -1,0 +1,138 @@
+table gold_artist_performance
+	lineageTag: 2e3385d3-5868-471d-b73f-795569f459b8
+	sourceLineageTag: [dbo].[gold_artist_performance]
+
+	measure 'Avg Momentum Score' = AVERAGE(gold_artist_performance[momentum_score])
+		formatString: 0
+		lineageTag: caee3cbb-ec02-4c88-b815-9a9f7a18e0d9
+
+		changedProperty = Name
+
+	measure 'Total Streams' = SUM(gold_artist_performance[total_streams])
+		formatString: 0
+		lineageTag: bd14abb3-0422-491e-ad23-3cec1aab36b9
+
+		changedProperty = Name
+
+	measure 'Inactive Artists' = COUNTROWS(FILTER(gold_artist_performance, gold_artist_performance[months_since_release] >= 12))
+		formatString: 0
+		lineageTag: f2299543-3c10-440c-b5ed-be91c21eec75
+
+		changedProperty = Name
+
+	column artist_id
+		dataType: string
+		lineageTag: 6335ef7a-5f95-4e23-a627-32577785104d
+		sourceLineageTag: artist_id
+		summarizeBy: none
+		sourceColumn: artist_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column artist_name
+		dataType: string
+		lineageTag: 19f52424-f13f-43a4-958c-5c4e9e651e46
+		sourceLineageTag: artist_name
+		summarizeBy: none
+		sourceColumn: artist_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column primary_genre
+		dataType: string
+		lineageTag: 30f69c40-0b54-496d-b504-56a1f23447b8
+		sourceLineageTag: primary_genre
+		summarizeBy: none
+		sourceColumn: primary_genre
+
+		annotation SummarizationSetBy = Automatic
+
+	column listener_tier
+		dataType: string
+		lineageTag: 3ef9d19b-fae1-422a-8cb4-a77d098a2b94
+		sourceLineageTag: listener_tier
+		summarizeBy: none
+		sourceColumn: listener_tier
+
+		annotation SummarizationSetBy = Automatic
+
+	column months_since_release
+		dataType: double
+		lineageTag: 529d2420-c681-4220-98f0-4647572dfa91
+		sourceLineageTag: months_since_release
+		summarizeBy: none
+		sourceColumn: months_since_release
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_streams
+		dataType: int64
+		formatString: 0
+		lineageTag: 71d12a51-a312-470a-9527-4d349a73e210
+		sourceLineageTag: total_streams
+		summarizeBy: none
+		sourceColumn: total_streams
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_chart_rank
+		dataType: double
+		lineageTag: c469a0a6-33a7-46fd-82db-4254df9e13c0
+		sourceLineageTag: avg_chart_rank
+		summarizeBy: none
+		sourceColumn: avg_chart_rank
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column chart_appearances
+		dataType: int64
+		formatString: 0
+		lineageTag: 4836ef2b-ba0d-460d-b130-b853693c8414
+		sourceLineageTag: chart_appearances
+		summarizeBy: none
+		sourceColumn: chart_appearances
+
+		annotation SummarizationSetBy = Automatic
+
+	column weeks_rising
+		dataType: int64
+		formatString: 0
+		lineageTag: 046c6623-4383-4d5a-b61c-d4f5e1720d80
+		sourceLineageTag: weeks_rising
+		summarizeBy: none
+		sourceColumn: weeks_rising
+
+		annotation SummarizationSetBy = Automatic
+
+	column weeks_top10
+		dataType: int64
+		formatString: 0
+		lineageTag: e6b7590f-5529-4ca7-ba3d-b53073bd3e5a
+		sourceLineageTag: weeks_top10
+		summarizeBy: none
+		sourceColumn: weeks_top10
+
+		annotation SummarizationSetBy = Automatic
+
+	column momentum_score
+		dataType: double
+		lineageTag: f78ca113-ac19-4b48-a1b0-8e05e09664ff
+		sourceLineageTag: momentum_score
+		summarizeBy: none
+		sourceColumn: momentum_score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition gold_artist_performance = entity
+		mode: directLake
+		source
+			entityName: gold_artist_performance
+			schemaName: dbo
+			expressionSource: 'DirectLake - spotify_lh'
+

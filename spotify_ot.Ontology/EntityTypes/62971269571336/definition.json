@@ -1,0 +1,148 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "62971269571336",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "gold_rising_tracks",
+  "entityIdParts": [
+    "2744113083191328811"
+  ],
+  "displayNamePropertyId": null,
+  "namespaceType": "Imported",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "2744113083191328811",
+      "name": "track_id",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2744113139069641858",
+      "name": "track_name",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2744113169837944990",
+      "name": "primary_artist",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2744113191017250143",
+      "name": "artist_name",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2744113218559310011",
+      "name": "track_genre",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2744113241020262567",
+      "name": "danceability",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "2744113267753216713",
+      "name": "energy",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "2744113291786554989",
+      "name": "valence",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "2744113317295315978",
+      "name": "mood",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2744113339291232133",
+      "name": "listener_tier",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2744113364896563365",
+      "name": "months_since_release",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "2744113388625164351",
+      "name": "regions_charting",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "2744113413621489531",
+      "name": "avg_rank",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "2744113436714060983",
+      "name": "total_streams",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "2744113461609044319",
+      "name": "top10_regions",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "2744113510911117063",
+      "name": "Rising_Tracks_Count",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "2744113569658099043",
+      "name": "High_Danceability_Rising",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    }
+  ],
+  "timeseriesProperties": [],
+  "semanticEnrichment": {
+    "synonyms": [
+      "trending tracks",
+      "rising tracks",
+      "hot tracks",
+      "tracks moving up",
+      "danceable hits",
+      "inactive artists trending"
+    ],
+    "description": "Tracks currently trending upward across European charts with high danceability. Each row is one track charting in 3\u002B EU regions with is_rising = true. Contains audio features (danceability, energy, valence, mood), months since artist\u0027s last release, and streaming totals. Use this to find danceable, trending tracks and artists who haven\u0027t released recently.",
+    "customAttributes": {}
+  },
+  "untypedProperties": []
+}

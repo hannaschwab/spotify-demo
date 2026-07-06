@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "a6da2ae1-922a-43ae-82b8-f9aa290a15cb",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "artist_id",
+        "targetPropertyId": "2766744552727554947"
+      },
+      {
+        "sourceColumnName": "artist_name",
+        "targetPropertyId": "2766744556847422670"
+      },
+      {
+        "sourceColumnName": "avg_chart_rank",
+        "targetPropertyId": "2766744555692458122"
+      },
+      {
+        "sourceColumnName": "chart_appearances",
+        "targetPropertyId": "2766744552971855653"
+      },
+      {
+        "sourceColumnName": "listener_tier",
+        "targetPropertyId": "2766744553669350327"
+      },
+      {
+        "sourceColumnName": "momentum_score",
+        "targetPropertyId": "2766744556155447702"
+      },
+      {
+        "sourceColumnName": "months_since_release",
+        "targetPropertyId": "2766744555240473088"
+      },
+      {
+        "sourceColumnName": "primary_genre",
+        "targetPropertyId": "2766744556037696490"
+      },
+      {
+        "sourceColumnName": "total_streams",
+        "targetPropertyId": "2766744554865144913"
+      },
+      {
+        "sourceColumnName": "weeks_rising",
+        "targetPropertyId": "2766744553418592622"
+      },
+      {
+        "sourceColumnName": "weeks_top10",
+        "targetPropertyId": "2766744553051876113"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "itemId": "cf610899-a0e3-8797-45c2-2b4c219acfff",
+      "sourceTableName": "gold_artist_performance",
+      "sourceSchema": "dbo"
+    }
+  }
+}

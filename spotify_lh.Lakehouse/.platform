@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "spotify_lh"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "cf610899-a0e3-8797-45c2-2b4c219acfff"
+  }
+}

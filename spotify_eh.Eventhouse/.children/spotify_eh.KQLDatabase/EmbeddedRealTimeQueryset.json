@@ -1,0 +1,22 @@
+{
+  "queryset": {
+    "version": "1.0.0",
+    "dataSources": [
+      {
+        "id": "bc244ea1-2e48-4307-8770-2a42e8921201",
+        "clusterUri": "https://trd-b7df3megvv793a2c6s.z6.kusto.fabric.microsoft.com",
+        "type": "Fabric",
+        "databaseItemId": "7850a768-00cd-431f-929c-a6011a4a829b"
+      }
+    ],
+    "tabs": [
+      {
+        "id": "c461e377-aa4b-4b60-a445-c915d893af52",
+        "content": ".create materialized-view with (backfill=true) streaming_summary on table streaming_events\n{\n    streaming_events\n    | summarize \n        stream_count = countif(event_type == \"stream\"),\n        total_events = count(),\n        avg_duration_sec = avg(stream_duration_sec),\n        last_event = max(event_timestamp)\n        by track_id, track_name, artist_name, region\n}",
+        "title": "Tab",
+        "dataSourceId": "bc244ea1-2e48-4307-8770-2a42e8921201"
+      }
+    ],
+    "querysetType": "Embedded"
+  }
+}

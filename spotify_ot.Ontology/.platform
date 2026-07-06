@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Ontology",
+    "displayName": "spotify_ot"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "b0f8cc9f-9d92-b495-4a02-e6eab526e396"
+  }
+}

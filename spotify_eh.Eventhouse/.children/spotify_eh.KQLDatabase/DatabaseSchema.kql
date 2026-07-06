@@ -1,0 +1,13 @@
+// KQL script
+// Use management commands in this script to configure your database items, such as tables, functions, materialized views, and more.
+
+
+.create-merge table streaming_events (event_id:string, track_id:string, track_name:string, artist_name:string, region:string, event_type:string, platform:string, event_timestamp:datetime, stream_duration_sec:int, completed:bool) 
+.create-or-alter materialized-view  streaming_summary on table streaming_events { streaming_events
+    | summarize 
+        stream_count = countif(event_type == "stream"),
+        total_events = count(),
+        avg_duration_sec = avg(stream_duration_sec),
+        last_event = max(event_timestamp)
+        by track_id, track_name, artist_name, region }
+.alter table streaming_events policy retention @'{"SoftDeletePeriod":"90.00:00:00","Recoverability":"Disabled"}'

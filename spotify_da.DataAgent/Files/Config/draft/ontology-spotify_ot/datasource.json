@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "b0f8cc9f-9d92-b495-4a02-e6eab526e396",
+  "workspaceId": "00000000-0000-0000-0000-000000000000",
+  "dataSourceInstructions": null,
+  "displayName": "spotify_ot",
+  "type": "ontology",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "gold_rising_tracks",
+      "is_selected": true,
+      "display_name": "gold_rising_tracks",
+      "type": "ontology.entity",
+      "description": "track_id,track_name,primary_artist,artist_name,track_genre,danceability,energy,valence,mood,listener_tier,months_since_release,regions_charting,avg_rank,total_streams,top10_regions",
+      "children": []
+    },
+    {
+      "id": "gold_genre_trends",
+      "is_selected": true,
+      "display_name": "gold_genre_trends",
+      "type": "ontology.entity",
+      "description": "track_genre,region,week_date,avg_rank,total_streams,charting_tracks,rising_tracks",
+      "children": []
+    },
+    {
+      "id": "gold_weekly_rankings",
+      "is_selected": true,
+      "display_name": "gold_weekly_rankings",
+      "type": "ontology.entity",
+      "description": "region,rank,track_id,track_name,primary_artist,track_genre,streams,trend,is_top10,is_rising,danceability,energy,valence,mood,energy_level",
+      "children": []
+    },
+    {
+      "id": "gold_artist_performance",
+      "is_selected": true,
+      "display_name": "gold_artist_performance",
+      "type": "ontology.entity",
+      "description": "artist_id,artist_name,avg_chart_rank,chart_appearances,listener_tier,momentum_score,months_since_release,primary_genre,total_streams,weeks_rising,weeks_top10",
+      "children": []
+    }
+  ]
+}

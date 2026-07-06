@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "spotify_sm"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "edf07a3d-bb55-8186-421a-9893ff7bf703"
+  }
+}

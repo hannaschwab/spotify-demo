@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "80589562359634",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "gold_genre_trends",
+  "entityIdParts": [],
+  "displayNamePropertyId": null,
+  "namespaceType": "Imported",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "2744114239475402266",
+      "name": "track_genre",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2744114262339308289",
+      "name": "region",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "2744114281124060584",
+      "name": "week_date",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "DateTime"
+    },
+    {
+      "id": "2744114307363063250",
+      "name": "avg_rank",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "2744114327080136996",
+      "name": "total_streams",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "2744114348443150004",
+      "name": "charting_tracks",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "2744114372415504291",
+      "name": "rising_tracks",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    }
+  ],
+  "timeseriesProperties": [],
+  "semanticEnrichment": {
+    "synonyms": [
+      "genre performance",
+      "genre rankings",
+      "music trends by genre",
+      "popular genres",
+      "genre breakdown"
+    ],
+    "description": "Genre performance aggregated by region over the last 4 weeks. Shows average rank, total streams, number of charting tracks, and rising tracks per genre per region. Use this to answer questions about which genres are dominating in which countries and how genre popularity is shifting over time.",
+    "customAttributes": {}
+  },
+  "untypedProperties": []
+}
